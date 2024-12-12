@@ -1,0 +1,42 @@
+.hero {
+  /* Use blend-mode multiply to set background image and background color */
+  background-blend-mode: multiply;
+  background-image: url("/images/hero_background.webp");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: rgba(32,32,32, 0.2);
+  min-height: 648px;
+  text-align: center;
+}
+
+#hero_mobile {
+  padding: 0;
+}
+
+.hero__title {
+  padding: 400px 2rem 8px;
+  color: #BF1515;
+  font-size: 39px;
+  font-weight: 500;
+  letter-spacing: -0.78px;
+  text-align: start;
+}
+
+.hero__description {
+  font-size: 13px;
+  padding: 0 2rem 22px;
+  text-align: start;
+}
+
+.hero__consultation {
+  display: inline-block;
+  text-transform: uppercase;
+  border: 1px solid #BF1515;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.hero__consultation:hover {
+  background-color: #BF1515;
+  transition: background-color 0.2s;
+}
