@@ -1,36 +1,36 @@
 @font-face {
   font-family: "Druk Wide Cy Web";
-  src: url('../fonts/druk_wide_cy_web/druk_wide_cy_web_medium_regular.ttf') format('truetype');
+  src: url('/fonts/druk_wide_cy_web/druk_wide_cy_web_medium_regular.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: Inter;
-  src: url("../fonts/inter/static/inter_light.ttf") format("truetype");
+  src: url("/fonts/inter/static/inter_light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: Inter;
-  src: url("../fonts/inter/static/inter_regular.ttf") format("truetype");
+  src: url("/fonts/inter/static/inter_regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: Inter;
-  src: url("../fonts/inter/static/inter_medium.ttf") format("truetype");
+  src: url("/fonts/inter/static/inter_medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: Inter;
-  src: url("../fonts/inter/static/inter_semibold.ttf") format("truetype");
+  src: url("/fonts/inter/static/inter_semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: Inter;
-  src: url("../fonts/inter/static/inter_bold.ttf") format("truetype");
+  src: url("/fonts/inter/static/inter_bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
