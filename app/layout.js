@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
       <head>
         <script
           src="https://kit.fontawesome.com/03b90cca97.js"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
           async
         ></script>
       </head>
