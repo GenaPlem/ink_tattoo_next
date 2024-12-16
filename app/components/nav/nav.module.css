@@ -55,3 +55,53 @@
 .nav__btn:checked ~ label #open_icon {
   display: none;
 }
+
+@media screen and (min-width: 768ox) {
+  .nav {
+    font-size: 40px;
+  }
+
+  .nav__links {
+    top: 106px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav label {
+    display: none;
+  }
+
+  .nav__links {
+      position: unset;
+      display: flex;
+      gap: 40px;
+      font-size: 18px;
+      min-width: unset;
+  }
+
+  .nav__links li {
+      padding: 0;
+      position: relative;
+  }
+
+  .nav__links li::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -0.5rem;
+      height: 3px;
+      width: 100%;
+      background-color: #BF1515;
+      transform: scale(0, 1);
+      transition: transform 0.25s;
+  }
+
+  .nav__links li:hover::after {
+      transform: scale(1, 1);
+  }
+
+  .nav__links li:not(:hover) {
+      opacity: 0.8;
+  }
+
+}
