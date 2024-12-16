@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./header.module.css";
 
 export default function Header() {
@@ -5,34 +6,31 @@ export default function Header() {
     <header className={styles.header}>
       <div className="container">
         <div className={styles.header__wrapper}>
-          <a href="" className={styles.header__logo}>
+          <Link href="/" className={styles.header__logo}>
             Ink tattoo
-          </a>
+          </Link>
 
           <nav className={styles.header__navigation}>
             <input id="nav_btn" type="checkbox" className={styles.nav_btn} />
             <label htmlFor="nav_btn">
-              <i
-                className="fa-solid fa-bars menu-icon"
-                id={styles.open_icon}
-              ></i>
-              <i className="fa-solid fa-xmark" id={styles.close_icon}></i>
+              <i className="fa-solid fa-bars menu-icon" id={styles.open_icon} />
+              <i className="fa-solid fa-xmark" id={styles.close_icon} />
             </label>
             <ul className={styles.header__links}>
               <li className={styles.header__link}>
-                <a href="#home">Home</a>
+                <Link href="#home">Home</Link>
               </li>
               <li className={styles.header__link}>
-                <a href="#about">About us</a>
+                <Link href="#about">About us</Link>
               </li>
               <li className={styles.header__link}>
-                <a href="#gallery">Gallery</a>
+                <Link href="#gallery">Gallery</Link>
               </li>
               <li className={styles.header__link}>
-                <a href="#faq">FAQ</a>
+                <Link href="#faq">FAQ</Link>
               </li>
               <li className={styles.header__link}>
-                <a href="#contacts">Contacts</a>
+                <Link href="#contacts">Contacts</Link>
               </li>
             </ul>
           </nav>
