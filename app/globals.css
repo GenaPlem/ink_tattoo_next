@@ -78,3 +78,33 @@ h2 {
 main {
   padding: 81px 0 26px;
 }
+
+@media screen and (min-width: 768px) {
+  html {
+      scroll-padding-top: 106px;
+  }
+
+  main {
+      padding-top: 106px;
+  }
+
+  h2 {
+      font-size: 35px;
+      text-align: start;
+      padding: 88px 0 60px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+      scroll-padding-top: unset;
+  }
+
+  main {
+      padding-top: unset;
+  }
+
+  h2 {
+      margin-left: 135px;
+  }
+}
