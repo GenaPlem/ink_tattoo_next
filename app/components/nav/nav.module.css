@@ -1,0 +1,57 @@
+
+.nav {
+  font-size: 20px;
+}
+
+/* Remove default dots in unordered list */
+.nav__links {
+  list-style-type: none;
+  display: none;
+  min-width: 100dvw;
+  position: absolute;
+  top: 81px;
+  right: 0;
+  z-index: 1;
+  text-align: center;
+}
+
+.nav__links a {
+  display: block;
+}
+
+.nav__link {
+  padding-bottom: 25px;
+}
+
+.nav__btn {
+  display: none;
+  border: none;
+  background-color: transparent;
+}
+
+#open_icon,
+#close_icon {
+  cursor: pointer;
+  color: #fffff1;
+}
+
+#close_icon {
+  display: none;
+}
+
+.nav__btn:checked ~ .nav__links {
+  display: block;
+  background-color: rgba(32, 32, 32, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem 0;
+  border-bottom: 3px solid #BF1515;
+}
+
+.nav__btn:checked ~ label #close_icon {
+  display: block;
+}
+
+.nav__btn:checked ~ label #open_icon {
+  display: none;
+}
