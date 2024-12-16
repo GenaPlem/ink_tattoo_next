@@ -40,3 +40,48 @@
   background-color: #BF1515;
   transition: background-color 0.2s;
 }
+
+@media screen and (max-width: 350px) {
+  .hero__title {
+      padding-top: 370px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    min-height: 886px;
+    background-image: url("/images/hero_background_desktop.webp");
+  }
+
+  .hero__title {
+      font-size: 55px;
+      padding-top: 552px;
+  }
+
+  .hero__description {
+      font-size: 18px;
+      padding-bottom: 56px;
+  }
+
+  .hero__consultation {
+      font-size: 21px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    background-size: cover;
+  }
+
+  .hero__title {
+      padding-top: 300px;
+  }
+
+  .hero__description {
+      padding-bottom: 200px;
+  }
+
+  .hero__consultation {
+      padding: 1.5rem;
+  }
+}
