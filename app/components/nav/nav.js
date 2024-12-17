@@ -12,7 +12,7 @@ export default function NavMenu() {
 
       <ul className={styles.nav__links}>
         <li className={styles.nav__link}>
-          <Link href="#home">Home</Link>
+          <Link href="/">Home</Link>
         </li>
         <li className={styles.nav__link}>
           <Link href="#about">About us</Link>
