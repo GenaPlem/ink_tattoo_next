@@ -11,8 +11,8 @@ export default function About() {
             <Image
               src="/images/about_img.png"
               alt="Tattoo artist drawing"
-              width={540}
-              height={470}
+              fill
+              styles={{ objectFit: "contain" }}
             />
           </div>
           <div className={styles.about__info}>

@@ -5,6 +5,7 @@
 .about__image {
   position: relative;
   width: 100%;
+  aspect-ratio: 4/3.5;
 }
 
 .about__info {
