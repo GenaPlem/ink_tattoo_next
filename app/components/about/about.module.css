@@ -4,8 +4,7 @@
 
 .about__image {
   position: relative;
-  max-width: 540px;
-  max-height: 470px;
+  width: 100%;
 }
 
 .about__info {
@@ -30,4 +29,27 @@
 
 .about__description span {
 font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .about__info {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about__wrapper {
+    display: flex;
+    padding-bottom: 50px;
+    gap: 30px;
+  }
+
+  .about__image {
+    width: 40%;
+  }
+
+  .about__info {
+    width: 60%;
+    padding: 0;
+  }
 }
