@@ -4,6 +4,7 @@ import About from "./components/about/about";
 import Gallery from "./components/gallery/gallery";
 import Faq from "./components/faq/faq";
 import Consultation from "./components/consultation/consultation";
+import Contact from "./components/contact/contact";
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
         <Gallery />
         <Faq />
         <Consultation />
+        <Contact />
       </main>
     </>
   );
