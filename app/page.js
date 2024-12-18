@@ -5,6 +5,7 @@ import Gallery from "./components/gallery/gallery";
 import Faq from "./components/faq/faq";
 import Consultation from "./components/consultation/consultation";
 import Contact from "./components/contact/contact";
+import Footer from "./components/footer/footer";
 
 export default function HomePage() {
   return (
@@ -18,6 +19,7 @@ export default function HomePage() {
         <Consultation />
         <Contact />
       </main>
+      <Footer />
     </>
   );
 }
