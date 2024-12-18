@@ -33,7 +33,7 @@ export default function Contact() {
                 rel="noopener"
                 aria-label="Visit our facebook profile(opens in new tab)"
               >
-                <i class="fa-brands fa-square-facebook"></i>
+                <i className="fa-brands fa-square-facebook"></i>
               </a>
             </li>
             <li>
@@ -73,11 +73,11 @@ export default function Contact() {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.2019491270757!2d-6.2694777562738055!3d53.35754062002627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e7fb94fc217%3A0x8036cf521161519f!2s10%2C%20James%20Mac%20Sweeney%20House%2C%20Berkeley%20St%2C%20Phibsborough%2C%20Dublin%207!5e0!3m2!1sru!2sie!4v1692103153539!5m2!1sru!2sie"
             width="600"
             height="450"
-            style="border:0;"
-            allowfullscreen=""
+            styles={"border:0"}
+            allowFullScreen=""
             title="Our location on the google maps"
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </section>
