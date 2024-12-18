@@ -1,0 +1,39 @@
+.contacts {
+  padding: 60px 0 0;
+}
+
+.contacts__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__links {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contacts__links li {
+  list-style-type: none;
+  font-size: 26px;
+}
+
+.contacts__links a:hover i {
+  color: #BF1515;
+  transition: color 0.2s;
+}
+
+.contacts__info p {
+  padding-bottom: 30px;
+}
+
+.contacts__map {
+  width: 100dvw;
+  position: relative;
+  left: -2rem;
+  right: -2rem;
+}
+
+.contacts iframe {
+  width: 100%;
+}
