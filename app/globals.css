@@ -79,6 +79,11 @@ main {
   padding: 81px 0 26px;
 }
 
+.hidden-title {
+  display: none;
+}
+
+
 @media screen and (min-width: 768px) {
   html {
       scroll-padding-top: 106px;
