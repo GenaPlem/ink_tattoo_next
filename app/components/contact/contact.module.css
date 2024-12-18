@@ -37,3 +37,49 @@
 .contacts iframe {
   width: 100%;
 }
+
+@media screen and (min-width: 768px) {
+  .contacts {
+    padding: 85px 0 25px;
+  }
+
+  .contacts__wrapper {
+    justify-content: space-around;
+    padding-bottom: 20px;
+  }
+
+  .contacts__info {
+    font-size: 20px;
+  }
+
+  .contacts__info p {
+    padding-bottom: 40px;
+  }
+
+  .contacts__links li {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contacts {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10%;
+  }
+
+  .contacts__wrapper {
+    flex-direction: column;
+  }
+
+  .contacts__links {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contacts__map {
+    position: unset;
+    max-width: 60%;
+  }
+}
