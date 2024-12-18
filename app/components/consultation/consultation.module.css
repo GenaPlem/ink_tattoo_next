@@ -49,3 +49,29 @@
   font-size: 0.5rem;
   text-decoration: underline;
 }
+
+@media screen and (min-width: 768px) {
+  .consultation p {
+    font-size: 1rem;
+  }
+
+  .consultation input,
+  .consultation textarea {
+    font-size: 25px;
+    padding: 18px 40px;
+  }
+
+  .consultation form {
+    padding: 80px 0;
+  }
+
+  #privacy_policy {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .consultation h2 {
+    margin: 0;
+  }
+}
