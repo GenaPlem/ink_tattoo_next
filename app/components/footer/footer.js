@@ -1,9 +1,13 @@
+import styles from "./footer.module.css";
+
 export default function Footer() {
   return (
-    <footer>
-      <div class="container">
-        <p>2023</p>
-        <p>Custom Concepts Tattoo and Design, All right reserved.</p>
+    <footer className={styles.footer}>
+      <div className="container">
+        <p className={styles.footer_text}>{new Date().getFullYear()} </p>
+        <p className={styles.footer_text}>
+          Custom Concepts Tattoo and Design, All right reserved.
+        </p>
       </div>
     </footer>
   );

@@ -1,0 +1,21 @@
+.footer {
+  border-top: 1px solid #fffff1;
+  padding: 15px;
+  text-align: center;
+}
+
+.footer_text {
+  display: contents;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 23px;
+  }
+
+  .footer_text {
+    font-size: 15px;
+  }
+}
