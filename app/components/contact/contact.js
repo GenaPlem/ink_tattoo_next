@@ -70,7 +70,7 @@ export default function Contact() {
         </div>
         <div className={styles.contacts__map}>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.2019491270757!2d-6.2694777562738055!3d53.35754062002627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e7fb94fc217%3A0x8036cf521161519f!2s10%2C%20James%20Mac%20Sweeney%20House%2C%20Berkeley%20St%2C%20Phibsborough%2C%20Dublin%207!5e0!3m2!1sru!2sie!4v1692103153539!5m2!1sru!2sie"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2381.2031794691443!2d-6.2714321!3d53.3575186!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e7fb94fc217%3A0x8036cf521161519f!2s10%2C%20James%20Mac%20Sweeney%20House%2C%20Berkeley%20St%2C%20Phibsborough%2C%20Dublin%207!5e0!3m2!1sen!2sie!4v1737030651510!5m2!1sen!2sie"
             width="600"
             height="450"
             styles={"border:0"}
