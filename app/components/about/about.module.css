@@ -24,6 +24,11 @@
   width: calc(50% - 15px);
 }
 
+.about__description__title {
+  display: inline-block;
+  padding-bottom: 1rem;
+}
+
 .about__description:nth-child(1) {
   width: 100%;
 }

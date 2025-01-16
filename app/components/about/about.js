@@ -17,7 +17,9 @@ export default function About() {
           </div>
           <div className={styles.about__info}>
             <p className={styles.about__description}>
-              <span>Ink Tattoo</span>
+              <span className={styles.about__description__title}>
+                Ink Tattoo
+              </span>
               <br /> dedicated to providing top-tier tattooing and piercing
               services that meet the highest standards of excellence. Each
               member of our team is well-trained and experienced, ensuring that
@@ -25,12 +27,12 @@ export default function About() {
               preferences.
             </p>
             <p className={styles.about__description}>
-              <span>Unleash</span>
+              <span className={styles.about__description__title}>Unleash</span>
               <br /> your imagination and let our skilled artists bring your
               tattoo vision to life.
             </p>
             <p className={styles.about__description}>
-              <span>Explore</span>
+              <span className={styles.about__description__title}>Explore</span>
               <br />
               our gallery to witness the artistic journey from concept to
               creation.
