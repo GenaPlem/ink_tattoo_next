@@ -38,7 +38,7 @@ export default function Consultation() {
               id="description"
               cols="30"
               rows="6"
-              placeholder="Describe what are you want us to make"
+              placeholder="Tell us about the design, style, and details..."
             ></textarea>
             <input type="submit" value="Send" />
           </form>
