@@ -12,13 +12,40 @@ export default function Consultation() {
 
   const [status, setStatus] = useState("");
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setStatus("");
+
+    try {
+      const response = await fetch("/api/sendMail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        setStatus(result.error || "Error sending email");
+      } else {
+        setStatus("Email sent successfully!");
+        setFormData({ name: "", number: "", email: "", description: "" });
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setStatus("Network or server error");
+    }
+  };
+
   return (
     <section className={styles.consultation} id="consultation">
       <div className="container">
         <div className={styles.consultation__wrapper}>
           <h2>Consultation</h2>
           <p>We`ll contact you shortly</p>
-          <form>
+          <form onSubmit={handleSubmit}>
             <label htmlFor="name" className="sr-only">
               Name
             </label>
