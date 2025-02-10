@@ -45,6 +45,12 @@
   transition: background-color 0.2s;
 }
 
+.consultation__status {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  font-weight: bold;
+}
+
 #privacy_policy {
   font-size: 0.5rem;
   text-decoration: underline;

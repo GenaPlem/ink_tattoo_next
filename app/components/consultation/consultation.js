@@ -109,7 +109,7 @@ export default function Consultation() {
             <input type="submit" value="Send" />
           </form>
 
-          {status && <p>{status}</p>}
+          {status && <p className={styles.consultation__status}>{status}</p>}
 
           <a href="privacy_policy.html" id={styles.privacy_policy}>
             Privacy Policy
