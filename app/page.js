@@ -1,4 +1,4 @@
-import Header from "./components/header/header";
+import Header from "./components/header/header.js";
 import Hero from "./components/hero/hero";
 import About from "./components/about/about";
 import Gallery from "./components/gallery/gallery";
