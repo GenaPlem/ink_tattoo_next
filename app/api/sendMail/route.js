@@ -15,8 +15,8 @@ export async function POST(req) {
     }
 
     const msg = {
-      to: process.env.EMAIL_TO,
-      from: process.env.EMAIL_FROM,
+      to: process.env.EMAIL,
+      from: process.env.EMAIL,
       subject: "Ink Tattoo request",
       text: `
         Name: ${name}
