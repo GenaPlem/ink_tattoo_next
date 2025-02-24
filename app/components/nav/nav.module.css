@@ -9,7 +9,7 @@
   display: none;
   min-width: 100dvw;
   position: absolute;
-  top: 81px;
+  top: 67px;
   right: 0;
   z-index: 1;
   text-align: center;
@@ -56,13 +56,13 @@
   display: none;
 }
 
-@media screen and (min-width: 768ox) {
+@media screen and (min-width: 768px) {
   .nav {
-    font-size: 40px;
+    font-size: 26px;
   }
 
   .nav__links {
-    top: 106px;
+    top: 92px;
   }
 }
 
