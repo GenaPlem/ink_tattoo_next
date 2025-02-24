@@ -76,7 +76,7 @@ h2 {
 }
 
 main {
-  padding: 81px 0 26px;
+  padding: 67px 0 26px;
 }
 
 .hidden-title {
@@ -86,11 +86,11 @@ main {
 
 @media screen and (min-width: 768px) {
   html {
-      scroll-padding-top: 106px;
+      scroll-padding-top: 92px;
   }
 
   main {
-      padding-top: 106px;
+      padding-top: 92px;
   }
 
   h2 {
