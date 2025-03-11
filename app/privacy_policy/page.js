@@ -4,8 +4,11 @@ export default function PrivacyPolicy() {
       <div className="container">
         <h1 className="privacy__title">Privacy Policy for Ink Tattoo</h1>
         <p>
-          At Ink Tattoo, accessible from https://ink-tattoo-next.vercel.app/,
-          one of our main priorities is the privacy of our visitors. This
+          At Ink Tattoo, accessible from{" "}
+          <a href="https://ink-tattoo-next.vercel.app/">
+            https://ink-tattoo-next.vercel.app/
+          </a>
+          , one of our main priorities is the privacy of our visitors. This
           Privacy Policy document contains types of information that is
           collected and recorded by Ink Tattoo and how we use it.
         </p>
