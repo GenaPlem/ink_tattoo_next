@@ -1,3 +1,5 @@
+import Header from "./components/header/header";
+import Footer from "./components/footer/footer";
 import "./globals.css";
 
 export const metadata = {
@@ -15,7 +17,11 @@ export default function RootLayout({ children }) {
           async
         ></script>
       </head>
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
