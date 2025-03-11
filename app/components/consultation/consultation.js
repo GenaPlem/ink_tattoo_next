@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import styles from "./consultation.module.css";
 
 export default function Consultation() {
@@ -111,9 +112,9 @@ export default function Consultation() {
 
           {status && <p className={styles.consultation__status}>{status}</p>}
 
-          <a href="privacy_policy.html" id={styles.privacy_policy}>
+          <Link href="/privacy_policy" id={styles.privacy_policy}>
             Privacy Policy
-          </a>
+          </Link>
         </div>
       </div>
     </section>
