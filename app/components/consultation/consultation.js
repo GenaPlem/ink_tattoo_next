@@ -43,6 +43,7 @@ export default function Consultation() {
 
       if (!response.ok) {
         setStatus(result.error || "Error sending email");
+        setTimeout(() => setStatus(""), 3000);
       } else {
         setStatus("Email sent successfully!");
         reset(); // Clear the form
@@ -51,6 +52,7 @@ export default function Consultation() {
     } catch (error) {
       console.error("Error:", error);
       setStatus("Network or server error");
+      setTimeout(() => setStatus(""), 3000);
     }
   };
 
@@ -115,13 +117,17 @@ export default function Consultation() {
             </div>
 
             {/* Submit Button */}
-            <input
-              type="submit"
-              value={isSubmitting ? "Sending..." : "Send"}
-              disabled={isSubmitting}
-              className={styles.submitButton}
-            />
-            {status && <p className={styles.consultation__status}>{status}</p>}
+            <div className={styles.consultation__field}>
+              <input
+                type="submit"
+                value={isSubmitting ? "Sending..." : "Send"}
+                disabled={isSubmitting}
+                className={styles.submitButton}
+              />
+              {status && (
+                <p className={styles.consultation__status}>{status}</p>
+              )}
+            </div>
           </form>
 
           <Link href="/privacy-policy" id={styles.privacy_policy}>
