@@ -63,6 +63,10 @@
 }
 
 .consultation__status {
+  position: absolute;
+  top: 3.5rem;
+  left: 50%;
+  transform: translate(-50%);
   font-size: 1rem;
   margin: 0 auto;
 }
@@ -87,6 +91,10 @@
   .consultation__error {
     bottom: 0.5rem;
     left: 1.2rem;
+  }
+
+  .consultation__status {
+    top: 4.5rem;
   }
 
   .consultation form {
