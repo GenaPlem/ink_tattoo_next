@@ -46,6 +46,7 @@ export default function Consultation() {
       } else {
         setStatus("Email sent successfully!");
         reset(); // Clear the form
+        setTimeout(() => setStatus(""), 3000);
       }
     } catch (error) {
       console.error("Error:", error);
