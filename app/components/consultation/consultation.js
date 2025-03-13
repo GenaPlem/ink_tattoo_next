@@ -1,29 +1,42 @@
 "use client";
+
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
 import { useState } from "react";
+
 import Link from "next/link";
 import styles from "./consultation.module.css";
 
+// Zod validation
+const formSchema = z.object({
+  name: z.string().min(3, "Name must be at least 3 characters"),
+  number: z.string().min(7, "Phone number must be at least 7 digits"),
+  email: z.string().email("Invalid email format"),
+  description: z.string().min(10, "Description must be at least 10 characters"),
+});
+
 export default function Consultation() {
-  const [formData, setFormData] = useState({
-    name: "",
-    number: "",
-    email: "",
-    description: "",
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm({
+    resolver: zodResolver(formSchema),
   });
 
   const [status, setStatus] = useState("");
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const onSubmit = async (data) => {
     setStatus("");
-
     try {
       const response = await fetch("/api/sendMail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(data),
       });
 
       const result = await response.json();
@@ -32,7 +45,7 @@ export default function Consultation() {
         setStatus(result.error || "Error sending email");
       } else {
         setStatus("Email sent successfully!");
-        setFormData({ name: "", number: "", email: "", description: "" });
+        reset(); // Clear the form
       }
     } catch (error) {
       console.error("Error:", error);
@@ -45,74 +58,72 @@ export default function Consultation() {
       <div className="container">
         <div className={styles.consultation__wrapper}>
           <h2>Consultation</h2>
-          <p>We`ll contact you shortly</p>
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="name" className="sr-only">
-              Name
-            </label>
+          <p className={styles.consultation__info}>We`ll contact you shortly</p>
+          <form onSubmit={handleSubmit(onSubmit)} noValidate>
+            {/* Name Field */}
+            <div className={styles.consultation__field}>
+              <input
+                type="text"
+                placeholder="Your name"
+                {...register("name")}
+              />
+              {errors.name && (
+                <p className={styles.consultation__error}>
+                  {errors.name.message}
+                </p>
+              )}
+            </div>
+
+            {/* Phone Number Field */}
+            <div className={styles.consultation__field}>
+              <input
+                type="text"
+                placeholder="Phone number"
+                {...register("number")}
+              />
+              {errors.number && (
+                <p className={styles.consultation__error}>
+                  {errors.number.message}
+                </p>
+              )}
+            </div>
+
+            {/* Email Field */}
+            <div className={styles.consultation__field}>
+              <input type="email" placeholder="E-mail" {...register("email")} />
+              {errors.email && (
+                <p className={styles.consultation__error}>
+                  {errors.email.message}
+                </p>
+              )}
+            </div>
+
+            {/* Description Field */}
+            <div className={styles.consultation__field}>
+              <textarea
+                placeholder="Tell us about the design, style, and details..."
+                {...register("description")}
+                className={styles.textarea}
+                rows="6"
+              />
+              {errors.description && (
+                <p className={styles.consultation__error}>
+                  {errors.description.message}
+                </p>
+              )}
+            </div>
+
+            {/* Submit Button */}
             <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Your name"
-              required
-              value={formData.name}
-              onChange={(e) =>
-                setFormData({ ...formData, name: e.target.value })
-              }
+              type="submit"
+              value={isSubmitting ? "Sending..." : "Send"}
+              disabled={isSubmitting}
+              className={styles.submitButton}
             />
-
-            <label htmlFor="number" className="sr-only">
-              Phone number
-            </label>
-            <input
-              type="text"
-              name="number"
-              id="number"
-              placeholder="Phone number"
-              required
-              value={formData.number}
-              onChange={(e) =>
-                setFormData({ ...formData, number: e.target.value })
-              }
-            />
-
-            <label htmlFor="email" className="sr-only">
-              Email
-            </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="E-mail"
-              required
-              value={formData.email}
-              onChange={(e) =>
-                setFormData({ ...formData, email: e.target.value })
-              }
-            />
-
-            <label htmlFor="description" className="sr-only">
-              Description
-            </label>
-            <textarea
-              name="description"
-              id="description"
-              cols="30"
-              rows="6"
-              placeholder="Tell us about the design, style, and details..."
-              value={formData.description}
-              onChange={(e) =>
-                setFormData({ ...formData, description: e.target.value })
-              }
-            />
-
-            <input type="submit" value="Send" />
+            {status && <p className={styles.consultation__status}>{status}</p>}
           </form>
 
-          {status && <p className={styles.consultation__status}>{status}</p>}
-
-          <Link href="/privacy_policy" id={styles.privacy_policy}>
+          <Link href="/privacy-policy" id={styles.privacy_policy}>
             Privacy Policy
           </Link>
         </div>
